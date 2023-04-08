@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Consultant</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="./style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Heebo:wght@800&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>this interior</h1>
+    </div>
+    <span class="material-icons">
+      menu
+      </span>
+    <nav>
+      <div class="close"><span class="material-icons">
+        close
+        </span></div>
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#collection">Collection</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="text">
+      <h1>Modern interior</h1>
+      <p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+      <div class="h3">
+        <a href="https://github.com/mohamedmostafa58">
+          <p>read more</p>
+          <span class="material-icons">
+            arrow_right_alt
+            </span>
+        </a>
+        
+      </div>
+    </div>
+    <div class="imgs">
+      <div class="img-container">
+        <img src="./imgs/photo1.png" alt="interior photo" class="photo2">
+      </div>
+      <div class="about">
+        <div class="section1">
+          <img src="./imgs/photo2.png" alt="about photo" >
+          <div class="text">
+            <h3>Aliza Webber</h3>
+            <p>Interior designer</p>
+          </div>
+        </div>
+        <div class="section2">
+          <p>Designed in 2020 by Aliza Webber</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>created by <span>mohamed mostafa</span> - devChallenges.io</p>
+  </footer>
+  <script>
+    const menuIcon=document.getElementsByClassName("material-icons")[0];
+    const listElm= document.querySelector("header nav ul")
+    const navElm=document.querySelector("header nav")
+    const closeElm=document.querySelector("nav .close .material-icons")
+    menuIcon.addEventListener("click",()=>{
+      listElm.classList.add("appear")
+      navElm.style.display="block"
+      document.body.style.overflowY="hidden"
+    })
+    closeElm.addEventListener("click",()=>{
+      listElm.classList.remove("appear")
+      navElm.style.display="none"
+      document.body.style.overflowY="scroll"
+    })
+  </script>
+</body>
+</html>
